@@ -2,7 +2,7 @@ FROM wurstmeister/base
 
 MAINTAINER Wurstmeister
 
-ENV ZOOKEEPER_VERSION 3.5.0-alpha
+ENV ZOOKEEPER_VERSION 3.5.2-alpha
 
 #Download Zookeeper
 RUN wget -q http://mirror.vorboss.net/apache/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/zookeeper-${ZOOKEEPER_VERSION}.tar.gz && \
