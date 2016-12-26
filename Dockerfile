@@ -25,6 +25,8 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 ENV ZK_HOME /opt/zookeeper-${ZOOKEEPER_VERSION}
 RUN sed  -i "s|/tmp/zookeeper|$ZK_HOME/data|g" $ZK_HOME/conf/zoo.cfg; mkdir $ZK_HOME/data
 
+RUN touch $ZK_HOME/conf/zoo.dynamic.cfg
+
 ADD start-zk.sh /usr/bin/start-zk.sh 
 EXPOSE 2181 2888 3888
 
