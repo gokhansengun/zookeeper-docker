@@ -33,4 +33,4 @@ EXPOSE 2181 2888 3888
 WORKDIR /opt/zookeeper-${ZOOKEEPER_VERSION}
 VOLUME ["/opt/zookeeper-${ZOOKEEPER_VERSION}/conf", "/opt/zookeeper-${ZOOKEEPER_VERSION}/data"]
 
-CMD /usr/sbin/sshd && bash /usr/bin/start-zk.sh
+CMD [ "/bin/bash", "-c", "/usr/bin/start-zk.sh" ]
