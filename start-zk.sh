@@ -18,7 +18,7 @@ term_handler() {
 
 # Capture kill requests to stop properly
 trap term_handler SIGHUP SIGINT SIGTERM
-/opt/zookeeper-3.5.2-alpha/bin/zkServer.sh start-foreground &
+/opt/zookeeper-3.4.9/bin/zkServer.sh start-foreground &
 ZK_PID=$!
 
 wait "$ZK_PID"
